@@ -216,3 +216,32 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+export function ProductSkeleton() {
+  return (
+    <div className={`${shimmer} relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md`}>
+        <div className={`${shimmer} relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl bg-gray-200`} />
+        <div className="mt-4 px-5 pb-5">
+        <div className="h-5 w-40 rounded-md bg-gray-200" />
+          <div className="mt-2 mb-5 flex items-center justify-between">
+            <div className="h-8 w-16 rounded-md bg-gray-200" />
+            <div className="flex space-x-1">
+              <div className="h-8 w-8 rounded-md bg-gray-200" />
+              <div className="h-8 w-8 rounded-md bg-gray-200" />
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="h-4 w-24 rounded-md bg-gray-200" />
+          </div>
+        </div>
+      </div>
+  );
+}
+
+export function GridSkeleton() {
+  return (
+    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
+      {[...Array(12)].map((_, i) => <ProductSkeleton key={i} />)}
+    </div>
+  );
+}

@@ -5,11 +5,11 @@ import { getProducts } from '@/app/lib/dummyapi';
 import { ProductResponse } from '@/app/lib/api-definitions';
 
 export default async function ProductsTable({
-  query,
-  currentPage,
+  _query,
+  _currentPage,
 }: {
-  query: string;
-  currentPage: number;
+  _query: string;
+  _currentPage: number;
 }) {
   const productResponse: ProductResponse = await getProducts();
 
